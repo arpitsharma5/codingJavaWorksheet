@@ -18,7 +18,6 @@ public class LargestNInArray {
   }
 
   public ArrayList<Integer> findLargest(ArrayList<Integer> input, int k) {
-    ArrayList<Integer> array1 = new ArrayList<>(input);
 
     PriorityQueue<Integer> res = new PriorityQueue<>();
     for(int i = 0 ; i < input.size(); i++) {

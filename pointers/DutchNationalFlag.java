@@ -13,7 +13,7 @@ Note: Using the library sort function is not allowed.*/
 public class DutchNationalFlag {
   public static void main(String[] args) {
     DutchNationalFlag dutchNationalFlag = new DutchNationalFlag();
-    ArrayList<Integer> inp = new ArrayList<>(List.of(0, 1,2,0,1,2));
+    ArrayList<Integer> inp = new ArrayList<>(List.of(2, 1,2,0,1,2));
     System.out.println(dutchNationalFlag.getArray(inp));
   }
   public ArrayList<Integer> getArray(ArrayList<Integer> A) {

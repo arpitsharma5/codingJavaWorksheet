@@ -1,4 +1,4 @@
-package com.practiseJava.Arrays;
+package com.practiseJava.linkedlist;
 
 public class LinkedListSum {
 public static void main(String[] args) {
