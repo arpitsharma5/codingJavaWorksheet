@@ -3,18 +3,19 @@ package com.practiseJava.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.Random;
 
 /*
-given array of integers and find duplicate
+QuickSelect: based on partition of large array by picking a random digit and placing it at its appropriate position
+then partion the half which contains the number and repeat it again
+ */
 
-                  2,5,3,6,10, 8
-* */
 public class kthLargestNumber {
 
   public static void main(String[] args) {
     ArrayList<Integer> inp = new ArrayList<>(List.of(2,5,9,23,7,6,6,7,11, 10,12,8));
     System.out.println(kthLargest(inp, 2));
-    System.out.println(findKthElementByQuickSelect(inp, 0, inp.size() -1, 11));
+    System.out.println(findKthElementByQuickSelect(inp, 0, inp.size() -1, 10));
   }
   static int kthLargest(ArrayList < Integer > arr, int K) {
     PriorityQueue < Integer > pq = new PriorityQueue<>((o1, o2) -> o2-o1);

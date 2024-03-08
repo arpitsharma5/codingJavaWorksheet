@@ -1,13 +1,13 @@
-package com.practiseJava;
+package com.practiseJava.interview;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /*
-* The objective is to identify pairs within an array where the elements between them are smaller than the smallest element from the pair.
+* The objective is to identify no of pairs within an array where the elements between them are smaller than the smallest element from the pair.
 
-For example, the numbers in the sequence are 10, 4, 6, 8, and 7.
+For example, the numbers in the sequence are 10, 4, 6, 8, and 7. eg (10, 4), (4, 6), (6, 8), (8, 7), (10, 6), (10, 8)
 * */
 public class Interview2 {
   public static void main(String[] args) {

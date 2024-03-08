@@ -1,8 +1,8 @@
 package com.practiseJava.Arrays;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.PriorityQueue;
 
 /*
 Arr1 = [9,5,6]
@@ -18,10 +18,18 @@ public class MergeSortedArray {
     System.out.println(merge(arr1, arr2));
   }
 
-  private static boolean merge(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
-    Collections.sort(arr1);
-    Collections.sort(arr2);
-
-    return false;
+  private static ArrayList<Integer> merge(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
+    PriorityQueue<Integer> pq = new PriorityQueue<>();
+    ArrayList<Integer> arr = new ArrayList<>();
+    for(int i=0; i < arr1.size(); i++) {
+      pq.add(arr1.get(i));
+    }
+    for(int i=0; i < arr2.size(); i++) {
+      pq.add(arr2.get(i));
+    }
+    for(int i = 0; i < arr1.size() + arr2.size(); i++) {
+      arr.add(pq.poll());
+    }
+    return arr;
   }
 }

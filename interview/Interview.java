@@ -1,4 +1,4 @@
-package com.practiseJava;
+package com.practiseJava.interview;
 
 /*
 * input = "ABCDEFGH"
