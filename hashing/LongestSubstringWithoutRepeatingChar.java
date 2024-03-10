@@ -1,12 +1,11 @@
 package com.practiseJava.hashing;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 /*
 * Given a string A, find the longest substring without repeating characters.
 * */
-public class LongestSubstring {
+public class LongestSubstringWithoutRepeatingChar {
   public static void main(String[] args) {
     System.out.println(getLength("abccbad"));
 //    System.out.println(getLength("GEEKSFORGEEKS"));
