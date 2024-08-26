@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.TreeSet;
-
+/*
+* You need to find the maximum sum of triplet ( Ai + Aj + Ak ) such that 0 <= i < j < k < N and Ai < Aj < Ak.
+* */
 public class MaximumSumTriplet {
   public static void main(String[] args) {
     MaximumSumTriplet largest = new MaximumSumTriplet();
     ArrayList<Integer> inp = new ArrayList<>(
-        List.of(2, 5, 3, 1, 4,2 ));
+        List.of(2, 5, 3, 1, 4, 2 ));
     System.out.println(largest.maximumSumTriplet(inp));
   }
   public int maximumSumTriplet(List<Integer> A) {

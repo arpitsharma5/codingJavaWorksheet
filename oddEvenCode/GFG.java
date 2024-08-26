@@ -14,7 +14,7 @@ public class GFG {
     {
       // Print number till the N
       while (counter < N) {
-
+        System.out.println("odd method called");
         // If count is even then print
         while (counter % 2 == 0) {
 
@@ -51,7 +51,7 @@ public class GFG {
     {
       // Print number till the N
       while (counter < N) {
-
+        System.out.println("even method called");
         // If count is odd then print
         while (counter % 2 == 1) {
 
@@ -96,10 +96,15 @@ public class GFG {
     }, "even");
 
     // Create thread t2
-    Thread t2 = new Thread(mt::printOddNumber, "odd");
+    Thread t2 = new Thread(new Runnable() {
+      @Override
+      public void run() {
+        mt.printOddNumber();
+      }
+    }, "odd");
 
     // Start both threads
-    t2.start();
     t1.start();
+    t2.start();
   }
 }

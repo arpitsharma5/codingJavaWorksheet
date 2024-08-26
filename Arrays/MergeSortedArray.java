@@ -1,9 +1,14 @@
 package com.practiseJava.Arrays;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.TreeMap;
+import javax.swing.tree.TreeNode;
 
 /*
 Arr1 = [9,5,6]
@@ -17,6 +22,36 @@ public class MergeSortedArray {
     ArrayList<Integer> arr1 = new ArrayList(List.of(9, 5, 6));
     ArrayList<Integer> arr2 = new ArrayList(List.of(16, 12, 23, 8, 10));
     System.out.println(merge(arr1, arr2));
+    System.out.println(merge2(arr1, arr2));
+  }
+
+  private static ArrayList<Integer> merge2(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
+    ArrayList<Integer> res = new ArrayList<>();
+    Collections.sort(arr1);
+    Collections.sort(arr2);
+    int n = arr1.size();
+    int m = arr2.size();
+    int i= 0, j= 0;
+    while (i < n & j < m) {
+      if(arr1.get(i) <= arr2.get(j)) {
+        res.add(arr1.get(i));
+        i++;
+      } else {
+        res.add(arr2.get(j));
+        j++;
+      }
+    }
+    while (i < n) {
+      res.add(arr1.get(i));
+      i++;
+
+    }
+    while (j < m ) {
+      res.add(arr2.get(j));
+      j++;
+
+    }
+    return res;
   }
 
   private static ArrayList<Integer> merge(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
