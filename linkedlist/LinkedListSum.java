@@ -35,13 +35,4 @@ public static void main(String[] args) {
     }
     return dummy.next;
   }
-  static class ListNode {
-    int item;
-    ListNode next;
-
-    public ListNode(int item) {
-      this.item = item;
-      this.next = null;
-    }
-  }
 }

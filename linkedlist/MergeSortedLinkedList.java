@@ -1,12 +1,13 @@
 package com.practiseJava.linkedlist;
 
+
 /*
 * You are given the heads of two sorted linked lists list1 and list2.
 Merge the two lists into one sorted linked list and return the head of the new sorted linked list.
 * Input: list1 = [1,2,4], list2 = [1,3,5]
 Output: [1,1,2,3,4,5]
 * */
-public class MergeSortedLinkedList {
+public class MergeSortedLinkedList extends PrintNode{
 
   public static void main(String args[]) {
     ListNode listNode = new ListNode(1);
@@ -15,7 +16,7 @@ public class MergeSortedLinkedList {
     listNode2.next = new ListNode(3);
     listNode.next.next = new ListNode(4);
     listNode2.next.next = new ListNode(5);
-    printLinkedList(mergeList(listNode, listNode2));
+    printList(mergeList(listNode, listNode2));
   }
 
   private static ListNode mergeList(ListNode listNode, ListNode listNode2) {
@@ -38,26 +39,5 @@ public class MergeSortedLinkedList {
       temp.next = listNode2;
     }
     return newList.next;
-  }
-
-  static void printLinkedList(ListNode head) {
-    ListNode temp = head;
-    while (temp != null) {
-      // Print the data of the current node
-      System.out.print(temp.item + " ");
-      // Move to the next node
-      temp = temp.next;
-    }
-    System.out.println();
-  }
-
-  static class ListNode {
-    int item;
-    ListNode next;
-
-    public ListNode(int item) {
-      this.item = item;
-      this.next = null;
-    }
   }
 }

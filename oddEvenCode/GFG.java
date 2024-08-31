@@ -96,12 +96,7 @@ public class GFG {
     }, "even");
 
     // Create thread t2
-    Thread t2 = new Thread(new Runnable() {
-      @Override
-      public void run() {
-        mt.printOddNumber();
-      }
-    }, "odd");
+    Thread t2 = new Thread(() -> mt.printOddNumber(), "odd");
 
     // Start both threads
     t1.start();
