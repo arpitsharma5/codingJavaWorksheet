@@ -13,5 +13,3 @@ V
 &pointers/LongestSubArrayHavingSum.java,6\f\6f52736845de292e0281f5747c7457fb7e652881
 @
 hashing/LCS.java,6\8\68fb816b9865fbb093f2706a60478396fd0a5741
-J
-Arrays/MergeIntervals.java,b\e\bee23ccd74a1e491c76ab4dc911733a82482cdf6
