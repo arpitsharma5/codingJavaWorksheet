@@ -7,10 +7,10 @@ import java.util.Stack;
 * Note:  The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
 * */
 
-public class StackProblem1 {
+public class ValidateParenthesis {
   public static void main(String args[]) {
-    StackProblem1 stackProblem1 = new StackProblem1();
-    System.out.println(stackProblem1.isValid("])"));
+    ValidateParenthesis stackProblem1 = new ValidateParenthesis();
+    System.out.println(stackProblem1.isValid("[(])"));
   }
 
   public int isValid(String str) {
