@@ -1,7 +1,5 @@
 package com.practiseJava.linkedlist;
 
-import com.practiseJava.dynamicProgramming.Lis;
-
 /*
 * Input: head = [1,2,3,4], n = 2
 

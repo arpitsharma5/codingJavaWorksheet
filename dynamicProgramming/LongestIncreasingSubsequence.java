@@ -2,13 +2,12 @@ package com.practiseJava.dynamicProgramming;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /*
-* Lis - Longest Increasing subsequence
+* LongestIncreasingSubsequence
 * */
-public class Lis {
+public class LongestIncreasingSubsequence {
   public int lis(final List<Integer> A) {
     int dp[];
     int n;
@@ -45,7 +44,7 @@ public class Lis {
   }
 
   public static void main(String[] args) {
-    Lis lis = new Lis();
+    LongestIncreasingSubsequence lis = new LongestIncreasingSubsequence();
     int a[] = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15};
     List<Integer> li = new ArrayList<>(List.of(0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15));
     System.out.println(lis.lis(li));

@@ -1,6 +1,5 @@
 package com.practiseJava.hashing;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -11,7 +10,7 @@ The longest consecutive elements sequence is [1, 2, 3, 4]. Return its length: 4.
 
 Your algorithm should run in O(n) complexity.
 * */
-public class LCS {
+public class LongestConsecutiveSequence {
   public static void main(String[] args) {
     System.out.println(getCount(List.of(100, 4, 200, 1, 3, 2)));
   }

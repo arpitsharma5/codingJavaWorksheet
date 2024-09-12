@@ -12,7 +12,7 @@ public class LongestCommonSubsequence {
     int dp[][] = new int[length1 + 1][length2 + 1];
 
     // Following steps build dp[length1+1][length2+1] in bottom up
-    // fashion. Note that dp[i][j] contains length of LCS
+    // fashion. Note that dp[i][j] contains length of LongestConsecutiveSequence
     // of str1[0..i-1] and str2[0..j-1]
     for (int i = 0; i <= length1; i++) {
       for (int j = 0; j <= length2; j++) {
