@@ -1,4 +1,4 @@
-package com.practiseJava.pointers;
+package com.practiseJava.slidingwindow;
 
 import java.util.ArrayList;
 import java.util.List;
