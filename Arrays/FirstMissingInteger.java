@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/*
+/* Find the first missing positive integer
+output 4
 * Follow the steps below to solve the problem:
 
 Traverse the array, Ignore the elements which are greater than N and less than 1.
