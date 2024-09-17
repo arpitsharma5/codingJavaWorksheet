@@ -18,32 +18,22 @@ public class FirstMissingInteger {
   public static void main(String[] args) {
     FirstMissingInteger firstMissingInteger = new FirstMissingInteger();
     ArrayList<Integer> inp = new ArrayList<>(
-        List.of(2, 3, -7, 6, 8, 1, -10, 15));
+        List.of(2,1));
     System.out.println(firstMissingInteger.firstMissingPositive(inp, inp.size()));
   }
   public int firstMissingPositive(ArrayList<Integer> arr, int n) {
-
-    for (int i = 0; i < n; i++) {
-
-      // Loop to check boundary
-      // condition and for swapping
-      while (arr.get(i) >= 1 && arr.get(i) <= n
-          && arr.get(i) != arr.get(arr.get(i) - 1)) {
-
-        int temp = arr.get(arr.get(i) - 1);
-        arr.set(arr.get(i) - 1, arr.get(i));
-        arr.set(i, temp);
+    boolean[] bool = new boolean[n];
+    for(int i = 0; i < n; i++) {
+      if(arr.get(i) > 0 && arr.get(i) <= n) {
+        bool[arr.get(i)-1] = true;
       }
-
     }
-
-    // Finding which index has value less than n
-    for (int i = 0; i < n; i++)
-      if (arr.get(i) != i + 1)
-        return (i + 1);
-
-    // If array has values from 1 to n
-    return (n + 1);
+    for(int j=0; j < n; j++) {
+      if(!bool[j]) {
+        return j+1;
+      }
+    }
+    return n+1;
   }
 
 }

@@ -1,4 +1,4 @@
-package com.practiseJava.multi;
+package com.practiseJava.backtracking;
 
 import java.util.ArrayList;
 import java.util.Collections;

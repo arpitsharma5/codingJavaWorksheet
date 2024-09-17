@@ -1,4 +1,4 @@
-package com.practiseJava.multi;// Java program for Merge Sort
+package com.practiseJava.backtracking;// Java program for Merge Sort
 
 public class MergeSort {
 
