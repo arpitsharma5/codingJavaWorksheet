@@ -1,4 +1,4 @@
-package com.practiseJava.Arrays;
+package com.practiseJava.priorityHeap;
 
 /*
 * Find the largest n numbers in an array without sorting the array in one iteration of the array
@@ -6,7 +6,6 @@ Example: findLargest([3, 5, 1, 2, 8, 9, 20], 3) => [20, 9, 8]
 */
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
