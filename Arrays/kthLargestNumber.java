@@ -1,6 +1,7 @@
 package com.practiseJava.Arrays;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -15,8 +16,8 @@ public class kthLargestNumber {
   public static void main(String[] args) {
     ArrayList<Integer> inp = new ArrayList<>(List.of(2,5,9,23,7,6,6,7,11, 10,12,8));
     System.out.println(kthLargest(inp, 2));
-    System.out.println(findKthLargestByQuickSelect(inp, 0, inp.size() -1, 11));
-    System.out.println(findKthSmallestByQuickSelect(inp, 0, inp.size() -1, 2));
+//    System.out.println(findKthLargestByQuickSelect(inp, 0, inp.size() -1, 11));
+//    System.out.println(findKthSmallestByQuickSelect(inp, 0, inp.size() -1, 2));
   }
 
   private static int findKthSmallestByQuickSelect(ArrayList<Integer> inp, int lIndex, int rIndex, int kth) {
@@ -35,12 +36,11 @@ public class kthLargestNumber {
     for (int i = 0; i < arr.size(); i++) {
       pq.add(arr.get(i));
     }
-    int l = K - 1;
-    while (l > 0) {
+    int popIndex = K - 1 ;
+    while(popIndex > 0) {
       pq.poll();
-      l = l - 1;
+      popIndex--;
     }
-
     return pq.peek();
   }
 

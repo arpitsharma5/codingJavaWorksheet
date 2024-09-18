@@ -19,12 +19,10 @@ public class LargestNInArray {
 
   public ArrayList<Integer> findLargest(ArrayList<Integer> input, int k) {
 
-    PriorityQueue<Integer> res = new PriorityQueue<>();
-    for(int i = 0 ; i < input.size(); i++) {
-      res.add(input.get(i));
-      if(res.size() > k) {
-        res.poll();
-      }
+    PriorityQueue<Integer> res = new PriorityQueue<>(input);
+
+    for(int i = 0; i < input.size() - k ; i++) {
+      res.poll();
     }
 
     ArrayList<Integer> topKList = new ArrayList<>(res);

@@ -10,8 +10,8 @@ If you don't want to perform the operation, return an empty array. Else, return 
 public class Flip {
   public static void main(String[] args) {
     Flip flip = new Flip();
-    System.out.println(flip.flip("1101010001")); // 3,9
-//    System.out.println(flip.flip("01100"));
+//    System.out.println(flip.flip("1101010001")); // 3,9
+    System.out.println(flip.flip("011"));
   }
 
   public ArrayList<Integer> flip(String A) {
