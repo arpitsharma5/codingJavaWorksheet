@@ -5,6 +5,7 @@ import java.util.List;
 
 
 /* Find the first missing positive integer
+inp: 2, 3, -7, 6, 8, 1, -10, 15
 output 4
 * Follow the steps below to solve the problem:
 
@@ -19,7 +20,7 @@ public class FirstMissingInteger {
   public static void main(String[] args) {
     FirstMissingInteger firstMissingInteger = new FirstMissingInteger();
     ArrayList<Integer> inp = new ArrayList<>(
-        List.of(2,1));
+        List.of(2, 3, -7, 6, 8, 1, -10, 15));
     System.out.println(firstMissingInteger.firstMissingPositive(inp, inp.size()));
   }
   public int firstMissingPositive(ArrayList<Integer> arr, int n) {
