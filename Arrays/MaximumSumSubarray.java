@@ -18,13 +18,24 @@ public class MaximumSumSubarray {
   private static int findMaximumSumSubarray(int[] nums) {
     int n = nums.length;
     int max = Integer.MIN_VALUE, sum = 0;
-
+    int start=0;
+    int end = 0;
+    int tempStart = 0;
     for(int i=0;i<n;i++){
       sum += nums[i];
-      max = Math.max(sum,max);
+      if(sum > max) {
+        max = sum;
+        start = tempStart;
+        end = i;
+      }
 
-      if(sum<0) sum = 0;
+      if(sum<0) {
+        sum = 0;
+        tempStart = i + 1;
+      }
+
     }
+    System.out.println(start + "    " + end);
 
     return max;
   }
