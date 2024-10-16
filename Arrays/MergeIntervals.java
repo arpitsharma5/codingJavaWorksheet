@@ -3,7 +3,13 @@ package com.practiseJava.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+/*
+* Example 1:
 
+Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+* */
 class Interval {
   int start, end;
 
@@ -33,15 +39,6 @@ public class MergeIntervals {
     Collections.sort(intervals, (o1, o2) -> o1.start - o2.start);
     ArrayList<Interval> res = new ArrayList<>();
     int index = 0;
-    /*for(int i = 1; i < intervals.size(); i++) {
-      if(intervals.get(index).end >= intervals.get(i).start) {
-        intervals.get(index).end = Math.max(intervals.get(index).end, intervals.get(i).end);
-      } else {
-        res.add(intervals.get(index));
-        intervals.set(index, intervals.get(i));
-      }
-    }
-    res.add(intervals.get(index));*/
 
     for(int i = 1; i < intervals.size(); i++) {
       if(intervals.get(index).end >= intervals.get(i).start) {
