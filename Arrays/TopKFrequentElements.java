@@ -19,17 +19,10 @@ public class TopKFrequentElements {
       countMap.put(num, countMap.getOrDefault(num, 0) + 1);
     }
 
-    PriorityQueue<Entry<Integer, Integer>> priorityQueue = new PriorityQueue(
+    PriorityQueue<Entry<Integer, Integer>> priorityQueue = new PriorityQueue<>(
 
-        new Comparator<Entry<Integer, Integer>>() {
-      @Override
-      public int compare(Entry<Integer, Integer> o1, Entry<Integer, Integer> o2) {
-        return o1.getValue().equals(o2.getValue()) ? o2.getKey().compareTo(o1.getKey())
-            : o2.getValue().compareTo(o1.getValue());
-      }
-    });
-
-
+        (o1, o2) -> o1.getValue().equals(o2.getValue()) ? o2.getKey().compareTo(o1.getKey())
+            : o2.getValue().compareTo(o1.getValue()));
 
     for(var entry: countMap.entrySet()) {
       priorityQueue.add(entry);

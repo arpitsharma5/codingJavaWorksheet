@@ -27,28 +27,26 @@ public class CombinationTargetSum {
   public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
     List<List<Integer>> res = new ArrayList<>();
     Arrays.sort(candidates);
-    backtrack(new ArrayList<>(), 0, target, candidates, res);
+    backtrack(new ArrayList<>(), 0, 0, target, candidates, res);
     return res;
   }
 
-  private static void backtrack(List<Integer> cur, int pos, int target, int[] candidates, List<List<Integer>> res) {
-    if (target == 0) {
-      res.add(new ArrayList<>(cur));
-      return;
+  private static void backtrack(List<Integer> curArray, int pos, int sum, int target,
+      int[] candidates, List<List<Integer>> res) {
+    if (sum == target) {
+      res.add(new ArrayList<>(curArray));
     }
-    if (target < 0) {
-      return;
-    }
-
-    int prev = -1;
     for (int i = pos; i < candidates.length; i++) {
-      if (candidates[i] == prev) {
-        continue;
+      System.out.println("curArray:" + curArray + "  i: " + i + "  pos: " + pos);
+      if (sum + candidates[i] > target) {
+        return;
       }
-      cur.add(candidates[i]);
-      backtrack(cur, i + 1, target - candidates[i], candidates, res);
-      cur.remove(cur.size() - 1);
-      prev = candidates[i];
+      if (i > pos && candidates[i] == candidates[i - 1]) {
+        return;
+      }
+      curArray.add(candidates[i]);
+      backtrack(curArray, i + 1, sum + candidates[i], target, candidates, res);
+      curArray.remove(curArray.size() - 1);
     }
   }
 }
