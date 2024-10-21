@@ -16,7 +16,7 @@ Output: true
 public class SearchWord {
 
   public static void main(String[] args) {
-    System.out.println(exist(new char[][]{{'A', 'B', 'C', 'D'}, {'S', 'A', 'A', 'T'}, {'A', 'C', 'A', 'E'}}, "CAT"));
+    System.out.println(exist(new char[][]{{'A', 'B', 'C', 'D'}, {'S', 'A', 'A', 'T'}, {'A', 'C', 'A', 'E'}}, "TEA"));
   }
 
   public static boolean exist(char[][] board, String word) {
@@ -53,7 +53,7 @@ public class SearchWord {
       return true;
     }
 
-    board[i][j] = word.charAt(index);
+//    board[i][j] = word.charAt(index);
     return false;
   }
 }

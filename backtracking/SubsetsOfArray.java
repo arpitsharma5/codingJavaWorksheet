@@ -12,7 +12,7 @@ Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 public class SubsetsOfArray {
 
   public static void main(String[] args) {
-    System.out.println(subsets(new int[]{1,2,3}));
+    System.out.println(subsets(new int[]{1,1,3}));
   }
   public static List<List<Integer>> subsets(int[] nums) {
     List<List<Integer>> res = new ArrayList<>();
@@ -21,14 +21,12 @@ public class SubsetsOfArray {
     return res;
   }
 
-  private static void dfs(int[] nums, int i, List<Integer> subset, List<List<Integer>> res) {
-    if (i >= nums.length) {
-      res.add(new ArrayList<>(subset));
-      return;
+  private static void dfs(int[] nums, int start, List<Integer> subset, List<List<Integer>> res) {
+    res.add(new ArrayList<>(subset));
+    for(int i = start; i < nums.length; i++) {
+      subset.add(nums[i]);
+      dfs(nums, i+1, subset, res);
+      subset.remove(subset.size()-1);
     }
-    subset.add(nums[i]);
-    dfs(nums, i + 1, subset, res);
-    subset.remove(subset.size() - 1);
-    dfs(nums, i + 1, subset, res);
   }
 }

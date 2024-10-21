@@ -14,7 +14,7 @@ public class UniquePermutation {
   public static ArrayList<ArrayList<Integer>> permute(ArrayList<Integer> A) {
     ArrayList<Integer> curr=new ArrayList<>();
     ArrayList<ArrayList<Integer>> res=new ArrayList<>();
-    Collections.sort(A);
+//    Collections.sort(A);
     boolean[] visited=new boolean[A.size()];
     recur(res,curr,A,visited);
     return res;
@@ -30,7 +30,7 @@ public class UniquePermutation {
       if(visited[i]){
         continue;
       }
-      if(i>0 && A.get(i)==A.get(i-1) && !visited[i-1]){
+      if(i>0 && A.get(i).equals(A.get(i - 1)) && !visited[i-1]){
         continue;
       }
       curr.add(A.get(i));
