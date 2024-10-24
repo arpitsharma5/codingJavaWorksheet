@@ -26,7 +26,7 @@ public class SearchRotatedSortedArray {
         } else {
           l = mid +1;
         }
-      } else {
+      } else {// means second half is sorted
         if(target > nums[mid] && target <= nums[r]) {
           l = mid +1;
         } else {
